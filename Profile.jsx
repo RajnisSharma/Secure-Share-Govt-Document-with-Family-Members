@@ -5,7 +5,7 @@ const Profile = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fetch the logged-in user's profile
+
   const fetchUserProfile = async () => {
     try {
       const userData = supabase.auth.user();
@@ -14,9 +14,9 @@ const Profile = () => {
         return;
       }
 
-      // Fetch user details (replace with custom logic if you have a profile table)
+     
       const { data: profile, error } = await supabase
-        .from("profiles") // Replace "profiles" with your table name
+        .from("profiles") 
         .select("*")
         .eq("id", userData.id)
         .single();
@@ -25,7 +25,7 @@ const Profile = () => {
         throw error;
       }
 
-      setUser(profile || userData); // Use the profile data if available
+      setUser(profile || userData); 
     } catch (error) {
       console.error("Error fetching user profile:", error);
       alert("Failed to fetch user profile.");

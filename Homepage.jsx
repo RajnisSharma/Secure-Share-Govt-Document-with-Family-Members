@@ -7,7 +7,7 @@ const Homepage = ({ token }) => {
   const [documents, setDocuments] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Redirect if not logged in
+ 
   useEffect(() => {
     if (!token) {
       alert("Please log in to access this page.");
@@ -15,7 +15,7 @@ const Homepage = ({ token }) => {
     }
   }, [token, navigate]);
 
-  // Fetch documents from Supabase
+  
   const fetchDocuments = async () => {
     setLoading(true);
     try {
@@ -32,7 +32,7 @@ const Homepage = ({ token }) => {
     }
   };
 
-  // Logout function
+  
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
@@ -43,7 +43,7 @@ const Homepage = ({ token }) => {
     }
   };
 
-  // Handle Delete
+  
   const handleDelete = async (fileName) => {
     try {
       const { error } = await supabase.storage
@@ -58,7 +58,7 @@ const Homepage = ({ token }) => {
     }
   };
 
-  // Handle Share (Generate public URL)
+  
   const handleShare = async (fileName) => {
     try {
       const { publicURL, error } = supabase.storage
@@ -72,7 +72,7 @@ const Homepage = ({ token }) => {
     }
   };
 
-  // Fetch documents on component mount
+ 
   useEffect(() => {
     fetchDocuments();
   }, []);

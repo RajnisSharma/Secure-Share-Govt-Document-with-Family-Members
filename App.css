@@ -1,0 +1,282 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  background: linear-gradient(to right, #6954eb, #d6d32d);
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.App {
+  background: linear-gradient(to right, #de7979e1, #676e52);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  background: #fff;
+  max-width: 450px;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form {
+  margin: 0 1rem;
+}
+
+.input-group {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 0.5rem 0.75rem 2.5rem;
+  border: none;
+  border-bottom: 1px solid #757575;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+
+input::placeholder {
+  color: #615050;
+  opacity: 1;
+}
+
+label {
+  position: absolute;
+  left: 2.5rem;
+  top: 0.75rem;
+  color: #757575;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -0.7rem;
+  font-size: 0.85rem;
+  color: hsl(327, 90%, 28%);
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(125, 125, 235);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #07001f;
+}
+
+.recover {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: rgb(125, 125, 235);
+}
+
+.recover a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.or {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #757575;
+}
+
+.icons {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.icons i {
+  color: rgb(125, 125, 235);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid #dfe9f5;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  background-color: #07001f;
+  color: white;
+  border-color: rgb(125, 125, 235);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.links button {
+  background: none;
+  border: none;
+  color: rgb(125, 125, 235);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links button:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  .icons i {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Homepage css style code */
+
+.h2 {
+  background: linear-gradient(to right, #6954eb, #333);
+  text-align: center;
+  padding: 0.3rem;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 0.3rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+
+.nav-links a {
+  color: #6996ef;
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-links a:hover {
+  color: blue;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  color: white;
+  width: 100px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #d92929;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome-section p {
+  font-size: 20px;
+  color: #777;
+}
+
+/* Profile css codes */
+
+.profile-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin: 5px 0;
+}
